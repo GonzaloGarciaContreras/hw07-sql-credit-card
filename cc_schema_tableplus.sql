@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS transaction;
 -- Create table and view column datatypes
 CREATE TABLE transaction (
   trans_id INT PRIMARY KEY,
-  t_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  t_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   amount NUMERIC,
   card_id VARCHAR(20) NOT NULL,
   FOREIGN KEY(card_id) REFERENCES credit_card (card_id),
